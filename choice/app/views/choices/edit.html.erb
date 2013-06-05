@@ -1,0 +1,11 @@
+<h1>Editing Choice #<%= @choice.id %></h1>
+
+
+<%= form_tag(choice_url(@choice), method: 'put') do %>
+
+  
+  <div>
+    <%= submit_tag "Update Choice" %>
+  </div>
+
+<% end %>

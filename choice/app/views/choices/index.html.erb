@@ -1,0 +1,26 @@
+<h1>Choices</h1>
+
+<p><%= link_to 'Add a New Choice', new_choice_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @choices.each do |choice| %>
+    <tr>
+  
+      <td><%= link_to 'Show', choice_url(choice) %></td>
+      <td><%= link_to 'Edit', edit_choice_url(choice) %></td>
+      <td><%= link_to 'Destroy', choice_url(choice), method: 'delete', data: { confirm: "Do you really want to delete this choice?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
